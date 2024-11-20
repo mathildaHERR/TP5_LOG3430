@@ -24,5 +24,4 @@ jobs:
           sleep 30
       - name: Start Locust tests
         run: |
-          locust -f locustfile.py &
           locust -f locustfile.py --users 10000 --spawn-rate 100 --autostart --run-time 2m -H http://127.0.0.1:5000
